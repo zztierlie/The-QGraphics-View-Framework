@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>784</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-image: url(:/images/blue.jpg)
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="title">
+         <string>类型</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="pointerBtn">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+QRadioButton::indicator::unchecked {
+    image: url(:/images/radio_unchecked.png);
+}
+
+QRadioButton::indicator::checked {
+    image: url(:/images/radio_checked.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>指针</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QRadioButton" name="textBtn">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+QRadioButton::indicator::unchecked {
+    image: url(:/images/radio_unchecked.png);
+}
+
+QRadioButton::indicator::checked {
+    image: url(:/images/radio_checked.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>文本</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QRadioButton" name="imageBtn">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+QRadioButton::indicator::unchecked {
+    image: url(:/images/radio_unchecked.png);
+}
+
+QRadioButton::indicator::checked {
+    image: url(:/images/radio_checked.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>图片</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QRadioButton" name="qrcodeBtn">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+QRadioButton::indicator::unchecked {
+    image: url(:/images/radio_unchecked.png);
+}
+
+QRadioButton::indicator::checked {
+    image: url(:/images/radio_checked.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>二维码</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="title">
+         <string>操作</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="deleteBtn">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+           </property>
+           <property name="text">
+            <string>删除</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="zoomInBtn">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+           </property>
+           <property name="text">
+            <string>放大</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="modifyBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+           </property>
+           <property name="text">
+            <string>修改</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="zoomOutBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+           </property>
+           <property name="text">
+            <string>缩小</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>位置</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="maximumSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>X</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_x">
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="maxLength">
+            <number>32767</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="addxBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+           </property>
+           <property name="text">
+            <string>+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="reducexBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Y</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_y">
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="addyBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+           </property>
+           <property name="text">
+            <string>+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QPushButton" name="reduceyBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>字体</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QFontComboBox" name="fontComboBox">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QToolButton" name="boldBtn">
+             <property name="styleSheet">
+              <string notr="true">QToolButton { 
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+}</string>
+             </property>
+             <property name="text">
+              <string>B</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="italicBtn">
+             <property name="styleSheet">
+              <string notr="true">QToolButton { 
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+}</string>
+             </property>
+             <property name="text">
+              <string>I</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="underlineBtn">
+             <property name="styleSheet">
+              <string notr="true">QToolButton { 
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+}</string>
+             </property>
+             <property name="text">
+              <string>U</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="sizeComboBox">
+             <property name="styleSheet">
+              <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+}</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QGraphicsView" name="graphicsView"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveImageBtn">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+        </property>
+        <property name="text">
+         <string>存为图片</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveBtn">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+        </property>
+        <property name="text">
+         <string>存为XML</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="readBtn">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(90, 90, 90), stop:1 rgb(60, 60, 60));
+    border: 1px solid black;
+    color:rgb(220,220,220);
+    padding: 1ex 2ex;
+}
+
+QPushButton::hover{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(150, 150, 150), stop:1 rgb(120, 120, 120));
+    color:rgb(255,255,255);
+}
+
+QPushButton:pressed{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(120, 120, 120), stop:1 rgb(90, 90, 90));
+}</string>
+        </property>
+        <property name="text">
+         <string>打开XML</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>784</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>设置</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>关于</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

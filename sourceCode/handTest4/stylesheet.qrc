@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>mainwindow.qss</file>
+        <file>images/radio_checked.png</file>
+        <file>images/radio_unchecked.png</file>
+        <file>images/blue.jpg</file>
+    </qresource>
+</RCC>
